@@ -1,0 +1,128 @@
+%\linespread{1.5} 
+\normalsize
+In this chapter, we discuss the physics and working principle of surface plasmon polaritons (SPPs), plasmonic waveguides and applications of hybrid plasmonic waveguides (HPWs). We also discuss some HPW based devices such as, optical ring resonators and optical nanoantennas.
+
+\section{Surface Plasmon Polaritons}
+With the rapid development of optical techniques, data transmission systems require highly increasing integration of photonic devices. It is estimated that the data transmission rates will reach 10 Tbit $\text{s}^{-1}$ by decreasing the element size of the photonic devices to the nanometer scale; in this case, the data storage density will be as high as 1 Tbit $\text{inch}^{-1}$. However, it is very difficult for conventional photonic devices to reduce the element sizes to the nanometer scale because of Abbe’s diffraction limit to about one-half of the optical wavelength. Excitation of surface plasmon polaritons (SPPs) can overcome the diffraction limit and offer a promising approach to control and manipulation propagation and dispersion of light on the nanometer scale. SPP is an electromagnetic excitation existing at the interface between a metal and a dielectric material; furthermore, the resonant interaction between the SPP and the electromagnetic radiation at metallic interfaces results in a remarkably enhanced optical near-field~\cite{Zhang2012,Atwater2007}.
+
+\subsection{Physics of Surface Plasmon Polaritons}
+\subsubsection{Excitation}
+SPPs are surface electromagnetic waves that propagate along the interface between a metal and a dielectric material, and the surface electromagnetic waves consist of surface charges. First of all, how to excite the surface charges? We consider a p-polarized wave (TM mode, the electric field vector parallel to the incident plane) that reaches a smooth planar interface at an incident angle $\theta_1$. The incident wave has a photon momentum $hk_d$ (where $k_d = 2\pi n_d/\lambda$) in the dielectric with a refractive index $n_d$. When the wave arrives at the interface, the reflective wave will propagate along the direction with an angle equal to the incident angle, and the photon momentum is conserved.
+
+\subsubsection{Coupling}
+The interaction between the electromagnetic field and the surface charges results in an increase in the SPP momentum compared with that of the free space according to the SPP dispersion relation given in~\cite{Zhang2012}, which gives rise to the momentum mismatch between light and SPP. The momentum of light and SPP can be matched using different coupler configurations such as prism couplers ~\cite{Zayats2005,Zayats2003}, grating couplers~\cite{Zayats2005,Zayats2003}, fiber and waveguide couplers ~\cite{Homola1999,Riziotis2009,Abdulhalim2008,Sharma2007}.
+
+The metal film is illuminated through the dielectric prism at an angle of incidence greater than the critical angle or the total internal reflection angle in the Kretschmann configuration~\cite{Kretschmann1968}. The light wavevector increases in the optically dense medium at a certain incident angle larger than the critical angle. The in-plane component of the light wavevector in the prism coincides with the SPP wavevector on an air–metal surface, which gives rise to the light tunneling through the metal film, and as a result, the light is coupled to the SPP. Furthermore, the efficiency of SPP excitation decreases with increasing film thickness due to the increase in the tunneling distance.
+
+\subsubsection{Propagation}
+Once light has been converted into an SPP mode on a flat metal surface it will propagate, but will gradually attenuate owing to losses arising from absorption in the metal. The propagation length of the SPP is thereby limited by the imaginary part of the complex SPP wavevector $k_{\text{spp}}$ due to the internal damping (ohmic losses), where $k_{\text{spp}} = k_{\text{sppr}} + \text{i}k_{\text{sppi}}$. Based on the SPP dispersion relation given in~\cite{Zhang2012}, the propagation length of SPP $\delta_{\text{spp}}$ is given by~\cite{Barnes2003,Bozhevolnyi2001} \newline \[\delta_{\text{spp}} = \dfrac{1}{2k_{\text{sppi}}} = \dfrac{\lambda}{2\pi} \bigg(\dfrac{\varepsilon_{\text{mr}} + \varepsilon_{\text{d}}}{\varepsilon_{\text{mr}}\varepsilon_{\text{d}}}\bigg)^{3/2}\dfrac{\varepsilon_{\text{mr}}^2}{\varepsilon_{\text{mi}}}\] \newline
+where $\varepsilon_{\text{mr}}$ and $\varepsilon_{\text{mi}}$ are the real and imaginary parts of the dielectric function of metal, respectively, that is, $\varepsilon_{\text{m}} = \varepsilon_{\text{mr}} + \text{i} \varepsilon_{\text{mi}}$, and $\delta_{\text{spp}}$ is the distance after which the SPP intensity decreases to $1/e$ of its starting value.
+
+\subsection{Applications of SPPs}
+Controlling light on scales much smaller than the light wavelength can be achieved by excitation of SPPs, owing to their unique optical properties described above. SPPs exhibit potential applications in subwavelength optics.
+
+\section{Plasmonic Waveguides}
+In this section, we consider plasmonic waveguides from the point of view of
+the longitudinal-transverse waveguide decomposition. Unlike the asymmetric dielectric waveguide, a very significant difference being that in the plasmonic case at least one of the layers is metallic with a dielectric constant having negative real-part in the operating frequency range (typically, infrared to optical)~\cite{Orfanidis2002}. A typical plasmonic waveguide consisting of a thin film $\varepsilon_f$, sandwiched between a cladding cover $\varepsilon_c$ and a substrate $\varepsilon_s$ is shown in Fig.~\ref{fig:pwg_struc}. In general, plasmonic waveguides are classified into three categories: (a)single interface between a dielectric $\varepsilon_c$ and a metal $\varepsilon_f$ , (b) metal-dielectric-metal (MDM) configuration in which $\varepsilon_f$ is a lossless dielectric and $\varepsilon_c$, $\varepsilon_s$ are metals, (c) dielectric-metal-dielectric (DMD) configuration in which $\varepsilon_f$ is a metal and $\varepsilon_c$, $\varepsilon_s$ are lossless dielectrics.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{plasmonic_wg}
+	\caption{Plasmonic waveguide depicting TM modes in either a DMD or MDM configuration~\cite{Orfanidis2002}.}
+	\label{fig:pwg_struc}
+\end{figure}
+
+Here, the quantities $\varepsilon_c$, $\varepsilon_f$, $\varepsilon_s$ denote the relative permittivities of the media, that is, $\varepsilon_i$ = $\epsilon_i / \epsilon_0$, $i = c, f, s$, where $\epsilon_i$ is the permittivities of the $i^{th}$ medium and $\epsilon_0$, the permittivity of vacuum.
+
+\subsection{Single Metal-Dielectric Interface}
+The case of a single metal-dielectric interface can be thought of as the limit of a DMD configuration when the film thickness tends to infinity, $a \to \infty$. It is depicted in Fig.~\ref{fig:smd_struc}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{smd_pwg}
+	\caption{Surface plasmon wave propagating along metal-dielectric interface.~\cite{Orfanidis2002}.}
+	\label{fig:smd_struc}
+\end{figure}
+
+\subsection{Metal-Dielectric-Metal Configuration}
+An MDM waveguide consists of a single dielectric layer sandwiched between two metal layers~\cite{Maier2007}. Because of the predicted attractive properties of MDM waveguides, their modal structure has been studied in great details~\cite{Kocaba2009}, and people have also used MDM for many applications~\cite{Veronis2009}.
+
+\subsection{Dielectric-Metal-Dielectric Configuration}
+Another possible structure of an SPP waveguide would consist of a thin metal film surrounded by two dielectric claddings or a thin metal film completely embedded in one dielectric material. Such a structure supports both short-range surface plasmon-polaritons (SRSPPs) and long-range surface plasmon-polaritons (LRSPPs). The latter are preferred for waveguiding purposes. With respect to this dielectric–metal–dielectric structure, two figures of merit, namely the propagation length and confinement, have been the focus of recent publications~\cite{Sellai2008}.
+
+\section{Hybrid Plasmonic Waveguides}
+In general, the hybrid plasmonic waveguide (HPW)~\cite{Alam2013,Hong2010,Oulton2008,Noghani2013,Bhaumik2016,Zeng2011} consists of a metal surface separated from a high-index slab by a low-index spacer. In this structure, the power is highly concentrated in the low-index spacer layer. In recent years, various structures of HPW have been proposed. Also, these structures are used for number of applications. Some of the applications of HPW are already mentioned in the previous chapter.
+
+\subsection{Modes Supported by HPW}
+In case of coupling between two identical waveguides, one of the coupled modes exhibits even symmetry and the other one exhibits odd symmetry with respect to the midpoint of the gap region (spacer) separating the two guides. In case of coupling between two dissimilar waveguides (the case discussed in this study), the coupled modes lack complete symmetry but as shown later in this section, one of the modes is still “quasieven” (does not become zero anywhere in the spacer region) and the other mode is “quasi-odd” (becomes zero somewhere in the spacer region)~\cite{Alam2013}.
+
+\subsection{Hybrid Plasmonic Waveguide Structures}
+In order to understand the properties and working of HP-waveguides, we have studied and simulated various structures proposed in recent literature. Some of those structures are briefly discussed in this section.
+
+\subsubsection{Silicon-based HPW with Metal Cap}
+\label{subsubsec:nslc_shpw}
+Fig.~\ref{fig:shpw_mc_struc} shows the cross section of the Si-based HP-waveguide structure, which consists of a SOI rib with a metal cap. For such a structure, the fabrication is simple and CMOS compatible. One could use a standard SOI wafer. An alternative way is using the method of depositing SiO$_2$ and alpha-Si thin films on a Si substrate with the PECVD (plasma enhanced chemical vapor deposition) technology~\cite{Dai2006}.
+
+When the thickness of the SiO$_2$ layer between Si and metal is large (e.g., 0.5 $\upmu$m), the fundamental mode field is confined well in the Si region and the metal layer almost does not influence the mode field distribution. In this case, the present structure is like a regular SOI nanowire. However, when the SiO$_2$ thickness becomes smaller (e.g., <50 nm), the metal layer will introduce a significant influence on the field distribution of the guided mode.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth,height=0.3\textheight]{shpw_mc_struc.jpg}
+	\caption{Cross-section of Si-based HP-waveguide with metal cap.}
+	\label{fig:shpw_mc_struc}
+\end{figure}
+
+\subsubsection{HMIM Plasmonic Waveguide}
+\label{subsubsec:hmim_pw}
+HMIM (hybrid metal-insulator-metal) contains a set of insulators sandwiched between two metal layers, where set of insulators contains three dielectric layers; high dielectric in between two low dielectric layers. Energy will be guided through two layers of low dielectrics, due to the coupling behavior of plasmonic and hybrid modes. Fig.~\ref{fig:hmim_struc} shows the cross-section of HMIM waveguide.
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=0.5\textwidth,height=0.3\textheight]{hmim_struc.jpg}
+	\caption{Cross-section of HMIM waveguide.}
+	\label{fig:hmim_struc}
+\end{figure}
+
+\subsubsection{InP-based Hybrid Plasmonic Waveguide}
+\label{subsubsec:InP_hpw}
+The lateral cross-section of deeply-etched conventional and hybrid plasmonic waveguides on an InP substrate are shown in Fig.~\ref{fig:InP_hpw_struc}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth,height=0.3\textheight]{InP_hpw_struc.jpg}
+	\caption{Cross-section of InP-based HP-waveguide.}
+	\label{fig:InP_hpw_struc}
+\end{figure}
+
+\section{Hybrid Plasmonic Waveguide Devices}
+As already mentioned in the previous chapter, hybrid plasmonic waveguides are used to fabricate number of devices used in photonic integrated circuits~\cite{Alam2015}. Here, we have presented our effort toward the study of hybrid plasmonic waveguide based optical ring resonators and optical nanoantenna.
+
+\subsection{Ring Resonators}
+In general, a ring resonator consists of a looped optical waveguide and a coupling mechanism to access the loop. When the waves in the loop build up a round trip phase shift that equals an integer times 2$\pi$, the waves interfere constructively and the cavity is in resonance~\cite{Bogaerts2011,Bogaerts2006,Heebner2008}.
+
+In its simplest form a ring resonator can be constructed by feeding one output of a directional coupler back into its input, the so-called all-pass filter (APF) or notch filter configuration. The term ring resonator is typically used to indicate any looped resonator, but in the narrow sense it is a circular ring. When the shape is elongated with a straight section along one direction (typically along the coupling section) the term racetrack resonator is also used. We will use ring resonator throughout this paper, but most derivations and results apply to racetracks and loops of other shapes.
+
+\subsubsection{HDLW based Ring Resonator}
+Given the advantages of the hybrid dielectric-loaded plasmonic waveguide, we have used it to build a ring resonator. It is formed by a ring waveguide placed in the proximity of a straight bus waveguide Fig.~\ref{fig:hdlw_geom} to allow optical coupling between them. A portion of the optical power propagating in the straight waveguide (propagating mode) is coupled to the ring and excites a circulating mode of the RR. The efficiency of this coupling depends on the gap between the ring and the straight waveguide and on the radius of the RR. The interference between the circulating mode and the propagating mode in the straight waveguide results in the filter properties of the RR, which are characterized by the extinction ratio and the FSR. The extinction ratio of the RR (defined as the ratio between the minimum and maximum transmission outputs) is determined by the strength of the coupling between the ring and the straight waveguide sections and by the attenuation of the plasmonic wave propagation, as well as the bend loss around
+the ring~\cite{Hong2011}.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=.8\textwidth]{hdlw_geom}
+	\caption{3D view of HDLW based ring resonator}
+	\label{fig:hdlw_geom}
+\end{figure}
+
+\subsection{Optical Nanoantennas}
+Nanoantennas are the counterpart of antennas at microwave and radio frequencies (RF), which are designed to convert free-propagating electromagnetic radiation into localized electric currents, and vice versa. It has become an emerging field in the recent decade with the rapid growth of nano-fabrication technologies, which provide the feasibility of squeezing the fabrication resolution down to the nanometer range with top-down approaches, enabling fascinating nano-optoelectronic devices at visible frequencies. Aside from their transmitting and receiving functionality, the operation of nanoantennas differs dramatically from their RF counterparts, and their analysis and design rules should accordingly be modified.
+
+\subsubsection{SOI-based HP-waveguide Horn Nanoantenna}
+The structure of nanoantenna consists of a SOI-based hybrid plasmonic waveguide that is connected to a horn-like configuration. A schematic of the horn nanoantenna is shown in Fig.~\ref{fig:hnano_geom}. As seen, the layer structure of the waveguide and horn-nanoantenna are the same, so this configuration is suitable for monolithic integration with the SOI-based passive photonic integrated circuits. In addition, the layer stack used in the proposed nanoantenna is compatible with the complementary metal-oxide-semiconductor (CMOS) technology which makes the fabrication of the proposed device feasible. The horn-nanoantenna is an ellipsoidal configuration which is connected to the hybrid plasmonic (HP) waveguide.
+
+% The [H] after {figure} fixes the positioning of images.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.8\textwidth]{hnano_geom}
+	\caption{3D view of horn nanoantenna}
+	\label{fig:hnano_geom}
+\end{figure}

@@ -1,0 +1,168 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+%\usepackage{color}
+\usepackage{afterpage}
+\usepackage{xcolor}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{lightblue}{rgb}{0.68, 0.85, 0.9}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+	backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\footnotesize,
+	breakatwhitespace=false,         
+	breaklines=true,                 
+	captionpos=b,                    
+	keepspaces=true,                 
+	numbers=left,                    
+	numbersep=9pt,                  
+	showspaces=false,                
+	showstringspaces=false,
+	showtabs=false,                  
+	tabsize=2
+}
+\lstset{style=mystyle}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[export]{adjustbox}
+\graphicspath{ {images/} }
+\usepackage{times}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{tocloft}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{upgreek}
+\geometry{a4paper, tmargin=4cm, rmargin=2.5cm, bmargin=2.5cm, lmargin=4cm}
+\usepackage{titlesec}
+\usepackage[toc,page]{appendix}
+
+%\usepackage{cite}
+\usepackage{breakcites}
+%\usepackage[english]{babel}
+\usepackage{hyperref}
+\usepackage{textgreek}
+
+\hypersetup{
+	colorlinks=true,
+%	linkcolor=blue,
+%	filecolor=magenta,      
+%	urlcolor=cyan,
+	allcolors=magenta,
+	pdftitle={Thesis - Major Project},
+	bookmarks=true,
+%	pdfpagemode=FullScreen,
+}
+%\urlstyle{same}
+
+\titleformat{\chapter}[display]{\centering\fontsize{14pt}{18pt}\selectfont\bfseries}
+{\chaptertitlename\ \thechapter}{12pt}{}
+\titleformat*{\section}{\fontsize{14pt}{18pt}\selectfont\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+%\titleformat*{\paragraph}{\large\bfseries}
+%\titleformat*{\subparagraph}{\large\bfseries}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+\renewcommand\contentsname{\fontsize{14pt}{18pt}\selectfont\sffamily\centerline{TABLE OF CONTENTS}}
+\renewcommand\cftloftitlefont{\fontsize{14pt}{18pt}\selectfont\sffamily\bfseries}
+\renewcommand\cftlottitlefont{\fontsize{14pt}{18pt}\selectfont\sffamily\bfseries}
+\pagestyle{fancy}
+\cfoot{\thepage}
+\rhead{}
+\lhead{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+%\renewcommand{\baselinestretch}{1.0}
+\renewcommand{\bibname}{References}
+%\setstretch{1.5}
+
+\begin{document}
+	% Change the title below to your own title E.g. \title{MYPROJECTNAME}
+%	\frontmatter
+	\title{B.Tech Thesis Template}
+	\frontmatter
+	\newgeometry{a4paper, tmargin=1in, rmargin=1in, bmargin=1in, lmargin=1.5in}
+	
+	\fontfamily{ptm}\selectfont
+	
+	\addtocontents{toc}{\textbf{Title}\hfill\textbf{Page No.}\par}
+	\pagecolor{lightblue}
+	\input{CoverPage}
+	\afterpage{\nopagecolor}
+	\input{InsideCoverPage}
+	\restoregeometry
+	
+	\fontfamily{phv} \selectfont
+	
+	\phantomsection \addcontentsline{toc}{chapter}{CERTIFICATE}
+	\input{certificate}
+	\phantomsection \addcontentsline{toc}{chapter}{DECLARATION AND COPYRIGHT}
+	\input{declaration}
+	\phantomsection \addcontentsline{toc}{chapter}{ACKNOWLEDGEMENT}
+	\input{acknowledgement}
+	\phantomsection \addcontentsline{toc}{chapter}{DEDICATION}
+	\input{dedication}
+	
+	
+	\phantomsection \addcontentsline{toc}{chapter}{ABSTRACT}
+	\input{abstract}
+	
+	\setstretch{1.5}
+	
+	
+	\phantomsection \addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
+	\tableofcontents
+	\newpage
+	\phantomsection \addcontentsline{toc}{chapter}{LIST OF FIGURES}
+	\listoffigures
+	\newpage
+	\phantomsection \addcontentsline{toc}{chapter}{LIST OF TABLES}
+	\listoftables
+	 
+	\mainmatter
+	
+	
+	\chapter{Introduction}
+	\input{Chapter1}
+	\chapter{Literature Review}
+	\input{Chapter2}
+	\chapter{Theoretical Discussion of HPW and Nano-Antenna}
+	\input{Chapter3}
+	\chapter{Simulation Result and Comparisons}
+	\input{Chapter4}
+	\chapter{Conclusion and Future Work}
+	\input{Chapter5}
+	
+	
+	\newpage
+	% The bibliography goes under a separate .bib file. To quote articles, just fill the appropriate headings in the bibliography file.
+	\addcontentsline{toc}{chapter}{References}
+%	\bibliographystyle{unsrt}
+%	\bibliographystyle{IEEEtran}
+	\bibliographystyle{apalike}
+	\bibliography{reference_ev}
+	
+	\begin{appendices}
+		\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+		\chapter{Formulae and Derivations}
+		\input{appendix}
+	\end{appendices}
+	
+	
+	
+\end{document}
